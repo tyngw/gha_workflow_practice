@@ -17,5 +17,5 @@ jobs:
         run: |
           label=${{ steps.label_check.outputs.label }}
           if [ "$label" = "test" ]; then
-            curl -X GET https://zipcloud.ibsnet.co.jp/api/search?zipcode=1000004
+            curl -X GET https://zipcloud.ibsnet.co.jp/api/search?zipcode=1000011
           fi

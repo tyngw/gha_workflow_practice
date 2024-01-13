@@ -19,7 +19,7 @@ jobs:
           if [ "$label" = "test" ]; then
             RESPONSE=$(curl -X GET https://zipcloud.ibsnet.co.jp/api/search?zipcode=1000011)
           fi
-          address=$(echo $RESPONSE | jq -r '.address1')
+          address=$(echo $RESPONSE | jq -r '.results[0].address1')
           echo $address
           echo "address=$address" >> $GITHUB_ENV
 

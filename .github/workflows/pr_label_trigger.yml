@@ -24,6 +24,6 @@ jobs:
           echo "address=$address" >> $GITHUB_ENV
 
       - name: Carry over variables
-        if: address
+        if: always()
         run: |
           echo "Address: $address"
